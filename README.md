@@ -45,6 +45,8 @@ For the most part, if you search for "TODO:" you'll find all the places that are
 After reviewing and fixing up the resources here, you can use `Make` to run the commands:
 
 ```bash
+make init
+# ... sets up the project's dependencies
 make plan
 # ... a plan output
 make apply
