@@ -42,7 +42,7 @@ For the most part, if you search for "TODO:" you'll find all the places that are
 
 ### `.tfvars` Files
 
-In some projects, like Terraform Bootstrap there is an `terraform.tfvars.example` which should be copied or moved
+In some projects, like Terraform Bootstrap, there is a `terraform.tfvars.example` file which should be copied or moved
 to `terraform.tfvars` and then have the values replaced with the values you'd like to use.
 
 At the moment I add the `terraform.tfvars` to the `.gitignore` file so that they arne't accidentally checked in,
