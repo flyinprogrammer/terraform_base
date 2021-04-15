@@ -40,6 +40,18 @@ Common values you need to replace because they're only useful for me:
 
 For the most part, if you search for "TODO:" you'll find all the places that are important.
 
+### `.tfvars` Files
+
+In some projects, like Terraform Bootstrap there is an `terraform.tfvars.example` which should be copied or moved
+to `terraform.tfvars` and then have the values replaced with the values you'd like to use.
+
+At the moment I add the `terraform.tfvars` to the `.gitignore` file so that they arne't accidentally checked in,
+in the event they contain sensitive information. If that's annoying remove its reference from `.gitignore` and check
+the file into source control.
+
+These [Variable Definitions Files](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files)
+can be quite helpful for creating more advanced CI/CD workflows. 
+
 ### Make
 
 After reviewing and fixing up the resources here, you can use `Make` to run the commands:

@@ -1,7 +1,7 @@
 apply:
 	terraform apply tfplan
 clean:
-	rm -rf .terraform .terraform.lock.hcl tfplan
+	rm -rf .terraform tfplan
 destroy:
 	terraform destroy
 fmt:
