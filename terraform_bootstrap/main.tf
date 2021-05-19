@@ -57,9 +57,23 @@ resource "aws_kms_key" "default" {
 resource "aws_s3_bucket" "default" {
   bucket = var.bucket_name
   acl    = "private"
+
   versioning {
     enabled = true
   }
+
+  lifecycle_rule {
+    enabled                                = true
+    prefix                                 = "terraform_remote_state/"
+    abort_incomplete_multipart_upload_days = 7
+    expiration {
+      expired_object_delete_marker = true
+    }
+    noncurrent_version_expiration {
+      days = 14
+    }
+  }
+
   policy = data.aws_iam_policy_document.s3_default.json
   server_side_encryption_configuration {
     rule {
